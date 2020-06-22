@@ -85,7 +85,7 @@ int main(void)
 
 		// animate update
 
-		if(0)
+		if(0)//human_play == true
 		{
 			if (glfw_example.getKeyPressed(GLFW_KEY_LEFT) == true) game_.processInput(0);
 			if (glfw_example.getKeyPressed(GLFW_KEY_RIGHT) == true) game_.processInput(1);
@@ -190,7 +190,8 @@ void initializeAI()
 
 		rl_.num_input_histories_ = 1;
 		rl_.num_exp_replay_ = 0;
-		rl_.num_state_variables_ = game_.getNumStateVariables();
+		rl_.num_state_variables_ = game_.getNumStateVariables();		//Ω≈∞Ê∏¡ ¿Œ«≤ = ºæº≠ªÁ¿Ã¡Ó * »˜Ω∫≈‰∏Æ
+		// Ω≈∞Ê∏¡ æ∆øÙ«≤ 
 		rl_.num_game_actions_ = game_.getNumActions();//TODO: obtain from game, left, right, stay
 
 		rl_.initialize();
